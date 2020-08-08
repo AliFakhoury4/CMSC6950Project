@@ -1,0 +1,92 @@
+\documentclass{bmcart}
+
+
+\usepackage[utf8]{inputenc} 
+
+
+\def\includegraphic{}
+\def\includegraphics{}
+
+\usepackage{graphicx}
+
+
+\startlocaldefs
+\endlocaldefs
+
+
+
+\begin{document}
+
+
+\begin{frontmatter}
+
+\begin{fmbox}
+\dochead{CMSC6950}
+
+
+
+\title{SunPy}
+
+
+\author[]{\inits{AF}\fnm{Ali Fakhoury}}
+
+
+\end{fmbox}
+
+\begin{abstractbox}
+
+\begin{abstract}
+\parttitle{What is SunPy}
+SunPy is a community-developed, free and open-source solar data analysis environment for Python, it is used to interact, visualise and analyse different types of solar data.
+
+\parttitle{Why do we use SunPy} 
+SunPy gives us access to different instruments that are being used to gather solar data. Using SunPy allows us to download that data and visualise and analyse it.
+\end{abstract}
+
+\end{abstractbox}
+
+
+\end{frontmatter}
+
+\section*{Info about some Packages}
+\begin{itemize}
+  \item SunPy: Provides tools to analyze data
+  \item Fido: Used to query the data that are gathered by the instruments
+\end{itemize}
+
+\section*{How does Fido work?}
+Fido works by allowing developers to query the data using several filters, including time, instrument, wavelength, etc...
+
+\section*{What is JSOC?}
+Joint Science Operations Center (JSOC) contains data products from the Solar Dynamics Observatory, as well as certain other missions and instruments. We are able to access this data using Fido. In order to get the data we need to register an email.
+
+\section*{Workflow}
+\begin{itemize}
+  \item Import all the needed packages.
+  \item Use Fido to query data
+  \item Use Fido to fetch the data and download it
+  \item Using SunPy, create a map from the downloaded data
+  \item Using matplotlib, plot the map
+\end{itemize}
+
+\section*{AIA Map created}
+
+\includegraphics{aiaResult.png}
+\begin{backmatter}
+
+This map represents data received from the instrument AIA, which is: Atmospheric Imaging Assembly, the Atmospheric Imaging Assembly images the solar atmosphere in multiple wavelengths to link changes in the surface to interior changes. Data includes images of the Sun in 10 wavelengths every 10 seconds.
+
+\section*{HMI Map created}
+\includegraphics{hmiResult.png}
+An HMI is Helioseismic and Magnetic Imager, it is an instrument designed to study oscillations and the magnetic field at the solar surface.
+
+\end{backmatter}
+
+\begin{thebibliography}{9}
+\bibitem{latexcompanion} 
+SunPy: A Python package for Solar Physics, https://joss.theoj.org/papers/10.21105/joss.01832
+
+\end{thebibliography}
+\end{document}
+
+
