@@ -1,0 +1,18 @@
+ report: report.tex
+ 	latexmk  -pdf report.tex
+
+aia.png:  aiaResult.py
+	python aiaResult.py
+
+hmi.png:  hmiResult.py
+	python hmiResult.py.py
+
+.PHONY: clean almost_clean
+
+clean:
+	latexmk -C
+	rm *.png
+
+almost_clean:
+	latexmk -c
+	rm *.png
